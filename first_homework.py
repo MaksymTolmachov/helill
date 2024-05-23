@@ -1,6 +1,6 @@
-My_favourite_city = 'Kharkiv'
-My_feelings = '😍'
+my_favourite_city = 'Kharkiv'
+my_feelings = '😍'
 
-print(My_favourite_city)
+print(my_favourite_city)
 
-print(My_feelings)
+print(my_feelings)
