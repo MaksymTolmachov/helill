@@ -15,4 +15,4 @@ template = "Very glad to you {user_first_name} {user_second_name}!"
 result = template.format(user_first_name=user_first_name, user_second_name=user_second_name)
 # result = f"Very glad to you {user_first_name} {user_second_name}!"
 print(result)
-print("thanks")
+print("Thank you")
