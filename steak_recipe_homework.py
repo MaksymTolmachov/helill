@@ -14,4 +14,3 @@ print(result_name)
 print(result_recipe)
 print(result_count)
 print(head)
-
