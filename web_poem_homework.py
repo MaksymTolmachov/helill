@@ -1,4 +1,3 @@
-
 from pywebio.input import input as input_pw
 from pywebio.output import put_html, put_text, put_image
 
@@ -21,8 +20,3 @@ symbols_in_my_summer_plans = len(question_what_plans_for_your_summer)
 put_text(f"{symbols_in_my_summer_plans} symbols was used in your writing.")
 img = open("Summer-1170x650-1.jpg", "rb").read()
 put_image(img, width="650px")
-
-
-
-
-
