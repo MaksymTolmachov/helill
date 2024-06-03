@@ -20,7 +20,7 @@ question_what_plans_for_your_summer = input_pw("What plans do you have for this 
 # I don't know how to count symbols. I spend about an hour to find th answer aaaaaaaaaa!
 # I don't know how to count symbols. I spend about an hour to find th answer aaaaaaaaaa!
 symbols_in_my_summer_plans = len(question_what_plans_for_your_summer)
-put_text(symbols_in_my_summer_plans)
+put_text(f"{symbols_in_my_summer_plans} symbols was used in your writing.")
 img = open("Summer-1170x650-1.jpg", "rb").read()
 put_image(img, width="650px")
 
