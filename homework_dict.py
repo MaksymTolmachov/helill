@@ -44,14 +44,14 @@ students["Alex Kolesnuk"] = {
     'Пошта': 'Alex.Kolesnuk2005@gmail.com',
     'Вік': 19,
     'Номер телефону': '+380096347829',
-    ' Середній бал': 74
+    'Середній бал': 74
 }
 #I DON'T KNOW WHAT TO DO
-# lowest_scour = 90
-for student in students:
-#     print(student)
-#     if student["Середній бал"] >= lowest_scour :
-#         print(f"{student},{student['Середній бал']}")
+lowest_scour = 90
+for student_name, data in students.items():
+    print(student_name)
+    if data["Середній бал"] >= lowest_scour :
+        print(f"{student_name}, {data['Середній бал']}")
 
-    two_students_scours_1 = "Alex Kolesnuk"['Середній бал'] + "Маша Кера"['Середній бал']
-    print(two_students_scours_1)
+    # two_students_scours_1 = "Alex Kolesnuk"['Середній бал'] + "Маша Кера"['Середній бал']
+    # print(two_students_scours_1)
