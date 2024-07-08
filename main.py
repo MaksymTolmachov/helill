@@ -1,5 +1,6 @@
 import email_sender_homework
 
+
 def main():
     list_of_recipients = [
         "aaaa@ukr.net",
@@ -12,8 +13,6 @@ def main():
 
     email_sender_homework.create_welcome_letter({"user": "Alex"})
 
+
 if __name__ == '__main__':
     main()
-
-
-
