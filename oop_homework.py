@@ -17,3 +17,5 @@ bwm_5_series = Car(made_by="BMW AG", brand="BWM", fuel_per_km=2.035, year_of_man
 bwm_5_series.car_mileage = 300
 print(mercedes_benz_c_class.__dict__)
 print(bwm_5_series.__dict__)
+
+
