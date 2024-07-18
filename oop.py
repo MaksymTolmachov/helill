@@ -51,7 +51,7 @@ class Person:
         return self.__money >= other.__money
 
 person1 = Person(name="alex", weight=3.600, birthday=datetime.datetime(year=2001, month=4, day=10))
-person2 = Person(name="Donald", weight=4.200)
+person2 = Person(name="Donald", weight=4.200, )
 
 
 
@@ -81,4 +81,4 @@ print(person1 == person2)
 tour_enrollment_list = [person1, person2]
 print(tour_enrollment_list)
 
-
+print(person2.birthday)
