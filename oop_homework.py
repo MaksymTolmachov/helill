@@ -4,16 +4,16 @@ class Car:
         self.brand = brand.title()
         self.fuel_per_km = fuel_per_km
         self.year_of_manufacture = year_of_manufacture
-        self.car_mileage = int or 0
-
-
+        self.car_mileage = 0
 
     def __str__(self) -> str:
         return f"{self.brand}"
+
     __repr__ = __str__
 
-Mercedes_Benz_C_class = Car(made_by="Mercedes-Benz", brand="mercedes", fuel_per_km=16.9)
-BMW_5_series = Car(made_by="BMW AG", brand="BWM", fuel_per_km=20.35, year_of_manufacture=2010)
 
-print(Mercedes_Benz_C_class.__dict__)
-print(BMW_5_series.__dict__)
+mercedes_benz_c_class = Car(made_by="Mercedes-Benz", brand="mercedes", fuel_per_km=16.9)
+bwm_5_series = Car(made_by="BMW AG", brand="BWM", fuel_per_km=20.35, year_of_manufacture=2010)
+bwm_5_series.car_mileage = 300
+print(mercedes_benz_c_class.__dict__)
+print(bwm_5_series.__dict__)
