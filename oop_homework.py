@@ -12,8 +12,10 @@ class Car:
     __repr__ = __str__
 
 
-mercedes_benz_c_class = Car(made_by="Mercedes-Benz", brand="mercedes", fuel_per_km=16.9)
-bwm_5_series = Car(made_by="BMW AG", brand="BWM", fuel_per_km=20.35, year_of_manufacture=2010)
+mercedes_benz_c_class = Car(made_by="Mercedes-Benz", brand="mercedes", fuel_per_km=1.69)
+bwm_5_series = Car(made_by="BMW AG", brand="BWM", fuel_per_km=2.035, year_of_manufacture=2010)
 bwm_5_series.car_mileage = 300
 print(mercedes_benz_c_class.__dict__)
 print(bwm_5_series.__dict__)
+
+
