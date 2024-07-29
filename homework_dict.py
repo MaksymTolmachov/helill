@@ -46,12 +46,35 @@ students["Alex Kolesnuk"] = {
     'Номер телефону': '+380096347829',
     'Середній бал': 74
 }
-#I DON'T KNOW WHAT TO DO
+
 lowest_scour = 90
 for student_name, data in students.items():
-    print(student_name)
     if data["Середній бал"] >= lowest_scour :
-        print(f"{student_name}, {data['Середній бал']}")
+        print(f"{student_name}, {data['Середній бал']}, {data['Вік']} years old")
 
-    # two_students_scours_1 = "Alex Kolesnuk"['Середній бал'] + "Маша Кера"['Середній бал']
-    # print(two_students_scours_1)
+
+def get_average_score(score_1: int, score_2: int,  score_3: int,  score_4: int):
+    score_4 = 95.8
+    score_2 = 64.5
+    score_3 = 80
+    score_1 = 74
+    altogether = score_2 + score_1 + score_3 + score_4
+    result = altogether / 4
+    return result
+
+
+for student_name, data in students.items():
+    if data['Номер телефону'] == None:
+        data['Номер телефону'] = "+380096875201"
+        print(data['Номер телефону'])
+
+
+
+
+
+
+
+
+
+
+
