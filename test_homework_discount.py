@@ -3,7 +3,7 @@ import pytest
 from utils.homework_discount_utils import get_cost_with_discount_from_cost
 
 
-testing_args = [(0, 10, 0), (200, 110, -20), (200, -20, 220)]
+testing_args = [(0, 10, 0), (200, 110, 0), (200, -20, 200)]
 
 
 @pytest.mark.parametrize("param_cost, param_discount, expected_result", testing_args)
