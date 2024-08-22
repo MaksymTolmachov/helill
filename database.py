@@ -67,9 +67,49 @@ with sqlite3.connect(DB_PATH) as connection:
     #
     # cursor.execute(query)
 
+    # query = """
+    #     SELECT name, description
+    #     FROM category
+    #     where id >= 1
+    # """
+    # result = cursor.execute(query)
+    # pprint(result.fetchall(), width=20)
+
+    # query = """
+    #         SELECT name, description, segment
+    #         FROM category
+    #         where (segment LIKE "%kid%")
+    #     """
+    # result = cursor.execute(query)
+    # pprint(result.fetchall(), width=20)
+
+    # query = """
+    #             SELECT id, name, description, segment
+    #             FROM category
+    #             where id BETWEEN 2 and 4
+    #         """
+    # result = cursor.execute(query)
+    # pprint(result.fetchall(), width=23)
+
+    # query = """
+    #                 SELECT id, name, description, segment
+    #                 FROM category
+    #                 where id BETWEEN 2 and 5
+    #                 LIMIT 3
+    #                 OFFSET 2
+    #             """
+    # result = cursor.execute(query)
+
+    # pprint(result.fetchall(), width=23)
+
     query = """
-        SELECT * , 2+2 as co
-        FROM category
-    """
+                        SELECT id, name, description, segment
+                        FROM category
+                        Left JOIN category
+                        ON products.category_id = category.id
+                        where id BETWEEN 2 and 5
+                        LIMIT 3
+                        OFFSET 2
+                    """
     result = cursor.execute(query)
-    pprint(result.fetchall(), width=20)
+    pprint(result.fetchall(), width=23)

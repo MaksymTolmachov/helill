@@ -1,4 +1,5 @@
 import sqlite3
+from pprint import pprint
 
 DB_PATH = "our_db_homework_school_.sqlite3"
 
@@ -54,15 +55,62 @@ with sqlite3.connect(DB_PATH) as connection:
     #             VALUES (?, ?, ?)
     #         """
     # cursor.execute(query5w, values)
-    name = "Dima"
-    surname = "kovalchuk"
-    specialization = "PE"
-    schools = "664"
-    values = [name, surname, specialization, schools]
-    query10w = """
-        INSERT INTO students(name, surname, specialization, schools)
-        VALUES (?, ?, ?, ?)      
+    # name = "Dima"
+    # surname = "Kovaluk"
+    # specialization = "Pe"
+    # schools = "664"
+    # values = [name, surname, specialization, schools]
+    # query1w = """
+    #     INSERT INTO students(name, surname, specialization, schools)
+    #     VALUES (?, ?, ?, ?)
+    # """
+    # cursor.execute(query1w, values)
+
+    # HOMWORK NUMBER TWO
+
+    query = """
+        SELECT students.name, students.surname, students.schools, students.specialization
+        FROM students
+        LEFT JOIN schools
+        ON students.schools = schools.number_of_this_school
+
     """
-    cursor.execute(query10w, values)
+    result1 = cursor.execute(query)
+    pprint(result1.fetchall(), width=80)
+
+    # query_add_column = """
+    #     ALTER TABLE students
+    #     ADD COLUMN phone_number VARCHAR(20)
+    # """
+    # cursor.execute(query_add_column)
+
+    query_update = """
+        UPDATE students
+        SET 
+            phone_number = "38099659418"
+        WHERE id = 5    
+    """
+    cursor.execute(query_update)
+
+    query_delete = """
+        DELETE FROM students
+        WHERE id BETWEEN 2 AND 4
+    """
+
+    cursor.execute(query_delete)
+
+    query_hw = """
+            SELECT students.id, students.name, students.surname, students.schools, students.specialization
+            FROM students
+            ORDER BY id DESC 
+            LIMIT 3
+            OFFSET 2
+            
+        """
+
+    result = cursor.execute(query_hw)
+    pprint(result.fetchall(), width=80)
+
+
 
 
