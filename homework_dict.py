@@ -34,24 +34,41 @@ students = {
     },
 }
 # ваш код нижче !!!!!!!! вище нічого не змінюємо
-from pywebio.input import input_group,slider, textarea, select, checkbox, radio, FLOAT, DATE, PASSWORD, DATETIME, input as input_pw
-from pywebio.output import put_success, put_error, put_warning, put_html,put_table, put_image
-from pywebio.session import run_js
-from pywebio import start_server
-from pprint import pprint
+
 
 students["Alex Kolesnuk"] = {
     'Пошта': 'Alex.Kolesnuk2005@gmail.com',
     'Вік': 19,
     'Номер телефону': '+380096347829',
-    'Середній бал': 74
+    'Середній бал': 90
 }
-#I DON'T KNOW WHAT TO DO
-lowest_scour = 90
-for student_name, data in students.items():
-    print(student_name)
-    if data["Середній бал"] >= lowest_scour :
-        print(f"{student_name}, {data['Середній бал']}")
 
-    # two_students_scours_1 = "Alex Kolesnuk"['Середній бал'] + "Маша Кера"['Середній бал']
-    # print(two_students_scours_1)
+lowest_scour = 90
+total_coumlate_score = 0
+for student_name, data in students.items():
+    if data["Середній бал"] >= lowest_scour :
+        print(f"{student_name}, {data['Середній бал']}, {data['Вік']} years old")
+
+    all_scores_altogether = total_coumlate_score =+ data["Середній бал"]
+    result = all_scores_altogether / len(students)
+
+
+
+    if data['Номер телефону'] is None:
+        data['Номер телефону'] = "+380096875201"
+        print(data['Номер телефону'])
+print(total_coumlate_score)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
